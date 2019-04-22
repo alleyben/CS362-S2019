@@ -37,7 +37,7 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 int adventurerEffect(int currentPlayer, struct gameState *state, int handPos)
 {
   int drawntreasure = 0;
-  int z = 0;
+  int z;
   int cardDrawn;
   int temphand[MAX_HAND];
   
@@ -77,7 +77,7 @@ int councilRoomEffect(int currentPlayer, struct gameState *state, int handPos)
       //Each other player draws a card
       for (i = 0; i < state->numPlayers; i++)
 	{
-	  if ( i != currentPlayer )
+	  if ( i == currentPlayer )
 	    {
 	      drawCard(i, state);
 	    }
@@ -124,7 +124,7 @@ int smithyEffect(int currentPlayer, struct gameState *state, int handPos)
 {
   int i;
   
-  for (i = 0; i < 3; i++)
+  for (i = 0; i <= 3; i++)
 	{
 	  drawCard(currentPlayer, state);
 	}
@@ -139,7 +139,7 @@ int villageEffect(int currentPlayer, struct gameState *state, int handPos)
   drawCard(currentPlayer, state);
 			
       //+2 Actions
-      state->numActions = state->numActions + 2;
+      state->numActions += 3;
 			
       //discard played card from hand
       discardCard(handPos, currentPlayer, state, 0);
