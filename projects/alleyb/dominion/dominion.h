@@ -81,13 +81,15 @@ struct gameState* newGame();
 int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 		  int k8, int k9, int k10);
 
-// new card effect functions /////////////////////////////////////////
+
+// homework added card effects ///////////////////////////////////////////////
+int adventurerEffect(int currentPlayer, struct gameState *state, int handPos);
+int councilRoomEffect(int currentPlayer, struct gameState *state, int handPos);
+int remodelEffect(int currentPlayer, struct gameState *state, int handPos, int choice1, int choice2);
 int smithyEffect(int currentPlayer, struct gameState *state, int handPos);
+int villageEffect(int currentPlayer, struct gameState *state, int handPos);
 
-int adventurerEffect(int currentPlayer, struct gameState *state);
 
-
-////////////////////////////////////////////////////////////////////
 
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 		   struct gameState *state);
