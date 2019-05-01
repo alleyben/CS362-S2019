@@ -1056,11 +1056,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 	state->deck[nextPlayer][state->deckCount[nextPlayer]--] = -1;
 	state->deckCount[nextPlayer]--;
       }
-<<<<<<< HEAD
 
-=======
 
->>>>>>> alleyb-assignment-2
       if (tributeRevealedCards[0] == tributeRevealedCards[1]){//If we have a duplicate card, just drop one
 	state->playedCards[state->playedCardCount] = tributeRevealedCards[1];
 	state->playedCardCount++;
@@ -1167,11 +1164,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 		}
 
 	    }
-<<<<<<< HEAD
 
-=======
 
->>>>>>> alleyb-assignment-2
+
 	}
 
       //discard played card from hand
@@ -1266,11 +1261,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
 int discardCard(int handPos, int currentPlayer, struct gameState *state, int trashFlag)
 {
-<<<<<<< HEAD
 
-=======
 
->>>>>>> alleyb-assignment-2
   //if card is not trashed, added to Played pile
   if (trashFlag < 1)
     {
