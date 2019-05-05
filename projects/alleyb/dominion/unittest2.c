@@ -68,20 +68,25 @@ int main() {
 
       // make sure new card costs no more than 2 more than old card
       if ((getCost(testGame.hand[thisPlayer][choice1]) + 2) <= getCost(choice2)) {
-        assert(r == 0);
+        printf("(%d) + 2 <= (%d)\n", testGame.hand[thisPlayer][choice1], getCost(choice2));
+        assertTrue(r == 0);
+      } else {
+        printf("(%d) + 2 > (%d)\n", testGame.hand[thisPlayer][choice1], getCost(choice2));
+        assertTrue(r != 0);
       }
 
     }
     // make sure old card is trashed
     for (i = 0; i < game.handCount[thisPlayer]; i++) {
-      assert(testGame.hand[thisPlayer][i] != trashedCard);
+      printf("(%d) is not (%d)\n", testGame.hand[thisPlayer][i], trashedCard);
+      assertTrue(testGame.hand[thisPlayer][i] != trashedCard);
     }
   }
 
   printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
+  assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
   printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
-  assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-  assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
+  assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
 
 
 	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTFUNCTION);

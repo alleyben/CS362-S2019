@@ -15,13 +15,24 @@ gcc -o cardtest1 -g  cardtest1.c dominion.o rngs.o $(CFLAGS)
 
 #define TESTCARD "adventurer"
 
+int getTreasureCount(int thisPlayer, struct gameState* game) {
+  int i, currentCard = 0, numTreasure = 0;
+  for (i = 0; i < game->handCount[thisPlayer]; i++) {
+    currentCard = game->hand[thisPlayer][i];
+    if( currentCard == copper || currentCard == silver || currentCard == gold ) {
+      numTreasure++;
+    }
+  }
+  return numTreasure;
+}
+
 int main() {
 
   int newCards = 0;
   int discarded = 1;
-  int shuffledCards = 0;
+  int numTreasureOld = 0, numTreasureNew = 0, addTreasure = 0;
+  int cardCountOld = 0, cardCountNew = 0;
   int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-  int removedCard;
   int seed = 1000;
   int numPlayers = 2;
   int thisPlayer = 0;
@@ -35,80 +46,54 @@ int main() {
 
 	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
 
-
+// make sure there are two cards minus discard card in hand
 	// ----------- TEST 1  --------------
 	printf("TEST 1: have two more treasure cards in your hand\n");
+
+  // make sure there are two extra treasure cards
+
+  addTreasure = 2;
+  newCards = 2;
+  game.hand[thisPlayer][0] = adventurer;
+  game.hand[thisPlayer][1] = copper;
+  game.hand[thisPlayer][2] = duchy;
+  game.hand[thisPlayer][3] = estate;
+  game.hand[thisPlayer][4] = feast;
 
 	// copy the game state to a test case
 	memcpy(&testGame, &game, sizeof(struct gameState));
 
-	cardEffect(salvager, choice1, choice2, choice3, &testGame, handpos, &bonus);
+	cardEffect(adventurer, choice1, choice2, choice3, &testGame, handpos, &bonus);
 
-	printf("number buys = %d, expected = %d\n", testGame.numBuys, game.numBuys + addBuys);
-	assert(testGame.numBuys == game.numBuys + addBuys);
+  // find number of treasure cards in hand
+  numTreasureNew = getTreasureCount(thisPlayer, &testGame);
+
+  numTreasureOld = getTreasureCount(thisPlayer, &game);
+
+
+	printf("number treasure = %d, expected = %d\n", numTreasureNew, numTreasureOld + addTreasure);
+	assertTrue(numTreasureNew == numTreasureOld + addTreasure);
 
 
 	// ----------- TEST 2 --------------
 
-	printf("TEST 2: have no extra cards in your hand other than original minus used adventurer card\n");
+	printf("TEST 2: same number of total cards\n");
 
-	// cycle through each card to get money for
-	for (choice1 = 1; choice1 < game.handCount[thisPlayer]; choice1++) {
+  // make sure there are same number of total cards
+  cardCountOld = game.deckCount[thisPlayer] + game.handCount[thisPlayer] + game.discardCount[thisPlayer];
+  cardCountNew = testGame.deckCount[thisPlayer] + testGame.handCount[thisPlayer] + testGame.discardCount[thisPlayer];
 
-		game.hand[thisPlayer][0] = steward;
-		game.hand[thisPlayer][1] = copper;
-		game.hand[thisPlayer][2] = duchy;
-		game.hand[thisPlayer][3] = estate;
-		game.hand[thisPlayer][4] = feast;
+  printf("number of cards total (%d); expected (%d)\n", cardCountOld, cardCountNew);
+  assertTrue(cardCountOld == cardCountNew);
 
-		// copy the game state to a test case
-		memcpy(&testGame, &game, sizeof(struct gameState));
+  // ----------- TEST 3 --------------
 
-    printf("starting money: (%d);", testGame.coins);
-		printf("starting cards: ");
-		for (m=0; m<testGame.handCount[thisPlayer]; m++) {
-			printf("(%d)", testGame.hand[thisPlayer][m]);
-		}
-		printf("; ");
+  printf("TEST 3: hand is +2 with number of treasure cards\n");
 
-		removedCard = testGame.hand[thisPlayer][choice1];
-    addCoin = getCost( handCard(choice1, &game) );
+  // make sure hand is +2 with number of treasure cards - discarded card
+  printf("number of cards in hand (%d); expected (%d)\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + addTreasure - discarded);
+  assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + addTreasure - discarded);
 
-		cardEffect(salvager, choice1, choice2, choice3, &testGame, handpos, &bonus);
-
-		printf("removed card: (%d); ", removedCard);
-    printf("added coin: (%d);", addCoin );
-		printf("ending cards: ");
-
-		// tests that the removed cards are no longer in the player's hand
-		for (m=0; m<testGame.handCount[thisPlayer]; m++) {
-			printf("(%d)", testGame.hand[thisPlayer][m]);
-			assert(testGame.hand[thisPlayer][m] != removedCard);
-		}
-		printf(", expected: ");
-		for (m=1; m<game.handCount[thisPlayer]; m++) {
-			if (game.hand[thisPlayer][m] != game.hand[thisPlayer][choice1]) {
-				printf("(%d)", game.hand[thisPlayer][m]);
-			}
-		}
-		printf("\n");
-
-		// tests for the appropriate number of remaining cards
-		newCards = 0;
-		discarded = 2;
-
-		if (choice1 == 1) {
-			printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
-			printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
-		}
-
-    printf("coins = %d, expected = %d\n", testGame.coins, game.coins + addCoin);
-
-		assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-		assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
-  	assert(testGame.coins == game.coins + addCoin);
-
-	}
 
 	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
 

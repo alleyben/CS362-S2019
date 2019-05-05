@@ -48,12 +48,11 @@ int main() {
 	addAct = 1;
   actTaken = 1;
 	printf("number of actions = %d, expected = %d\n", testGame.numActions, game.numActions + addAct);
+  assertTrue(testGame.numActions == game.numActions + addAct - actTaken);
   printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
+  assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
   printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
-
-  assert(testGame.numActions == game.numActions + addAct - actTaken);
-  assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-  assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
+  assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
 
 
 	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);

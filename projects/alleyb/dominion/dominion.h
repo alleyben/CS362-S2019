@@ -89,6 +89,8 @@ int remodelEffect(int currentPlayer, struct gameState *state, int handPos, int c
 int smithyEffect(int currentPlayer, struct gameState *state, int handPos);
 int villageEffect(int currentPlayer, struct gameState *state, int handPos);
 
+void assertTrue(int statement);
+
 
 
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,

@@ -37,29 +37,29 @@ int* kingdomCards(int k1, int k2, int k3, int k4, int k5, int k6, int k7,
 int adventurerEffect(int currentPlayer, struct gameState *state, int handPos)
 {
   int drawntreasure = 0;
-  int z;
+  int z = 0;
   int cardDrawn;
   int temphand[MAX_HAND];
 
   while(drawntreasure<2){
-	if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
-	  shuffle(currentPlayer, state);
-	}
-	drawCard(currentPlayer, state);
-	cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-	if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
-	  drawntreasure++;
-	else{
-	  temphand[z]=cardDrawn;
-	  state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
-	  z++;
-	}
-      }
-      while(z-1>=0){
-	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
-	z=z-1;
-      }
-      return 0;
+	  if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
+	    shuffle(currentPlayer, state);
+	  }
+    drawCard(currentPlayer, state);
+    cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
+    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold){
+      drawntreasure++;
+    }else{
+      temphand[z]=cardDrawn;
+      state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
+      z++;
+    }
+  }
+  while(z-1>=0){
+  	state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
+  	z=z-1;
+  }
+  return 0;
 }
 
 int councilRoomEffect(int currentPlayer, struct gameState *state, int handPos)
@@ -124,14 +124,11 @@ int smithyEffect(int currentPlayer, struct gameState *state, int handPos)
 {
   int i;
 
-  for (i = 0; i <= 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
+  for (i = 0; i <= 3; i++) { drawCard(currentPlayer, state); }
 
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+  //discard card from hand
+  discardCard(handPos, currentPlayer, state, 0);
+  return 0;
 }
 
 int villageEffect(int currentPlayer, struct gameState *state, int handPos)
@@ -144,6 +141,14 @@ int villageEffect(int currentPlayer, struct gameState *state, int handPos)
       //discard played card from hand
       discardCard(handPos, currentPlayer, state, 0);
       return 0;
+}
+
+void assertTrue(int statement) {
+  if (statement) {
+    printf("TRUE\n");
+  } else {
+    printf("FALSE\n");
+  }
 }
 
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,

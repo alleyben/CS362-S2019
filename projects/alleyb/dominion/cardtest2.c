@@ -42,8 +42,8 @@ int main() {
 
 	cardEffect(smithy, choice1, choice2, choice3, &testGame, handpos, &bonus);
 
-	printf("number of cards = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
-	assert(testGame.handCount == game.handCount + newCards - discarded);
+	printf("number of cards = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] + newCards);
+	assertTrue(testGame.handCount == game.deckCount + newCards);
 
 
 	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);

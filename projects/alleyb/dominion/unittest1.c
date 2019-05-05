@@ -42,11 +42,11 @@ int main() {
 	councilRoomEffect(thisPlayer, &testGame, handpos);
 
   printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
+  assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
   printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
+  assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
 	printf("number buys = %d, expected = %d\n", testGame.numBuys, game.numBuys + addBuys);
-  assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-  assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
-	assert(testGame.numBuys == game.numBuys + addBuys);
+	assertTrue(testGame.numBuys == game.numBuys + addBuys);
 
 
 
@@ -61,14 +61,14 @@ int main() {
   discarded = 0;
 
   councilRoomEffect(thisPlayer, &testGame, handpos);
-  
+
 	// cycle through each player to test number of cards in hand
 	for (thisPlayer = 1; thisPlayer < game.numPlayers; thisPlayer++) {
 
     printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
+    assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
     printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
-    assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-    assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
+    assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
 
 	}
 

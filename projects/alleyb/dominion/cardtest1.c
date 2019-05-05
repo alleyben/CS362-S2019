@@ -50,7 +50,7 @@ int main() {
 
 	addBuys = 1;
 	printf("number buys = %d, expected = %d\n", testGame.numBuys, game.numBuys + addBuys);
-	assert(testGame.numBuys == game.numBuys + addBuys);
+	assertTrue(testGame.numBuys == game.numBuys + addBuys);
 
 
 	// ----------- TEST 2 --------------
@@ -60,7 +60,7 @@ int main() {
 	// cycle through each card to get money for
 	for (choice1 = 1; choice1 < game.handCount[thisPlayer]; choice1++) {
 
-		game.hand[thisPlayer][0] = steward;
+		game.hand[thisPlayer][0] = salvager;
 		game.hand[thisPlayer][1] = copper;
 		game.hand[thisPlayer][2] = duchy;
 		game.hand[thisPlayer][3] = estate;
@@ -88,7 +88,7 @@ int main() {
 		// tests that the removed cards are no longer in the player's hand
 		for (m=0; m<testGame.handCount[thisPlayer]; m++) {
 			printf("(%d)", testGame.hand[thisPlayer][m]);
-			assert(testGame.hand[thisPlayer][m] != removedCard);
+			assertTrue(testGame.hand[thisPlayer][m] != removedCard);
 		}
 		printf(", expected: ");
 		for (m=1; m<game.handCount[thisPlayer]; m++) {
@@ -104,14 +104,13 @@ int main() {
 
 		if (choice1 == 1) {
 			printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards - discarded);
+      assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
 			printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
+      assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
 		}
 
     printf("coins = %d, expected = %d\n", testGame.coins, game.coins + addCoin);
-
-		assert(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards - discarded);
-		assert(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
-  	assert(testGame.coins == game.coins + addCoin);
+  	assertTrue(testGame.coins == game.coins + addCoin);
 
 	}
 
