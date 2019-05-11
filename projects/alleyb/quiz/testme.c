@@ -16,7 +16,7 @@ char inputChar()
 char *inputString()
 {
     // TODO: rewrite this function
-    char *strArr[] = {"reset", "!start?", "end", "howdy", "begin_ning", "try harder", "he2345lp", "what", "(*&%%)"};
+    char *strArr[] = {"reset", "!start?", "end", "howdy", "begin_ning", "try harder", "he2345lp", "what", "(*&%%)", "", " "};
     return strArr[rand()%9];
 }
 
