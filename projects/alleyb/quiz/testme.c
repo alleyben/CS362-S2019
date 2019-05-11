@@ -3,21 +3,21 @@
 #include<stdlib.h>
 #include<time.h>
 
-int counter = -1;
 
 char inputChar()
 {
     // TODO: rewrite this function
-    char retStr[] = "[({ ax})]";
-    counter = rand()%9;
-    printf("random num: %d\n", counter);
+    int counter;
+    char retStr[] = "[({ ax})]0!%\\4";
+    counter = rand()%14;
     return retStr[counter];
 }
 
 char *inputString()
 {
     // TODO: rewrite this function
-    return "reset";
+    char *strArr[] = {"reset", "!start?", "end", "howdy", "begin_ning", "try harder", "he2345lp", "what", "(*&%%)"};
+    return strArr[rand()%9];
 }
 
 void testme()

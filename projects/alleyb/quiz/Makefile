@@ -10,4 +10,4 @@ gcov:
 	gcov testme.c
 
 clean:
-	rm testme *.gcda *.gcno *.gcov
+	rm testme *.gcda *.gcno *.gcov *.out
