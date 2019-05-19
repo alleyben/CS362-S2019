@@ -24,12 +24,11 @@ randomtestcard2: randomtestcard2.c dominion.o rngs.o
 randomtestcard1: randomtestcard3.c dominion.o rngs.o
   gcc -o randomtestcard3 -g  randomtestcard3.c dominion.o rngs.o $(CFLAGS)
 
-randomtestresults:
 unittestresults: randomtestcard1 randomtestcard2 randomtestcard3
-	./randomtestcard1 &> randomtestresults.out
-	./randomtestcard2 >> randomtestresults.out
-	./randomtestcard3 >> randomtestresults.out
-	gcov dominion.c >> randomtestresults.out
+  ./randomtestcard1 &> randomtestresults.out
+  ./randomtestcard2 >> randomtestresults.out
+  ./randomtestcard3 >> randomtestresults.out
+  gcov dominion.c >> randomtestresults.out
 
 badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
