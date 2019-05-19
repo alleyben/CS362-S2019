@@ -1,10 +1,3 @@
-/*
-Include the following lines in your makefile:
-cardtest1: cardtest1.c dominion.o rngs.o
-gcc -o cardtest1 -g  cardtest1.c dominion.o rngs.o $(CFLAGS)
-*/
-
-
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>
@@ -13,13 +6,14 @@ gcc -o cardtest1 -g  cardtest1.c dominion.o rngs.o $(CFLAGS)
 #include "rngs.h"
 #include <stdlib.h>
 
-#define TESTCARD "smithy"
+#define TESTFUNCTION "villageEffect"
 
 int main() {
 
-  int newCards = 3;
-  int discarded = 1;
-  int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
+  int newCards = 0;
+  int addActs = 0;
+  int shuffledCards = 0;
+  int handpos = 0;
   int seed = 1000;
   int numPlayers = 2;
   int thisPlayer = 0;
@@ -31,22 +25,30 @@ int main() {
 	// initialize a game state and player cards
 	initializeGame(numPlayers, k, seed, &game);
 
-	printf("----------------- Testing Card: %s ----------------\n", TESTCARD);
+	printf("----------------- Testing Function: %s ----------------\n", TESTFUNCTION);
 
 
 	// ----------- TEST 1  --------------
-	printf("TEST 1: get 3 extra cards\n");
+	printf("TEST 1\n");
 
 	// copy the game state to a test case
 	memcpy(&testGame, &game, sizeof(struct gameState));
 
-	cardEffect(smithy, choice1, choice2, choice3, &testGame, handpos, &bonus);
+  addActs = 2;
+  newCards = 1;
 
-	printf("number of cards = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] + newCards);
-	assertTrue(testGame.handCount == game.deckCount + newCards);
+	villageEffect(thisPlayer, &testGame, handpos);
 
 
-	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
+  printf("hand count = %d, expected = %d\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + newCards);
+  assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + newCards);
+  printf("deck count = %d, expected = %d\n", testGame.deckCount[thisPlayer], game.deckCount[thisPlayer] - newCards + shuffledCards);
+  assertTrue(testGame.deckCount[thisPlayer] == game.deckCount[thisPlayer] - newCards + shuffledCards);
+	printf("number actions = %d, expected = %d\n", testGame.numActions, game.numActions + addActs);
+	assertTrue(testGame.numActions == game.numActions + addActs);
+
+
+	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTFUNCTION);
 
 
 	return 0;
