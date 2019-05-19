@@ -16,19 +16,19 @@ testDrawCard: testDrawCard.c dominion.o rngs.o
 #########
 
 randomtestcard1: randomtestcard1.c dominion.o rngs.o
-  gcc -o randomtestcard1 -g  randomtestcard1.c dominion.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard1 -g randomtestcard1.c dominion.o rngs.o $(CFLAGS)
 
 randomtestcard2: randomtestcard2.c dominion.o rngs.o
-  gcc -o randomtestcard2 -g  randomtestcard2.c dominion.o rngs.o $(CFLAGS)
+	gcc -o randomtestcard2 -g randomtestcard2.c dominion.o rngs.o $(CFLAGS)
 
-randomtestcard1: randomtestcard3.c dominion.o rngs.o
-  gcc -o randomtestcard3 -g  randomtestcard3.c dominion.o rngs.o $(CFLAGS)
+cardtest3: randomtestcard3.c dominion.o rngs.o
+	gcc -o randomtestcard3 -g randomtestcard3.c dominion.o rngs.o $(CFLAGS)
 
-unittestresults: randomtestcard1 randomtestcard2 randomtestcard3
-  ./randomtestcard1 &> randomtestresults.out
-  ./randomtestcard2 >> randomtestresults.out
-  ./randomtestcard3 >> randomtestresults.out
-  gcov dominion.c >> randomtestresults.out
+randomtestresults: randomtestcard1 randomtestcard2 randomtestcard3
+	./randomtestcard1 &> randomtestresults.out
+	./randomtestcard2 >> randomtestresults.out
+	./randomtestcard3 >> randomtestresults.out
+	gcov dominion.c >> randomtestresults.out
 
 badTestDrawCard: badTestDrawCard.c dominion.o rngs.o
 	gcc -o badTestDrawCard -g  badTestDrawCard.c dominion.o rngs.o $(CFLAGS)
