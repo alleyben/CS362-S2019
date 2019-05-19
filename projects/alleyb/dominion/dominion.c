@@ -146,6 +146,16 @@ int villageEffect(int currentPlayer, struct gameState *state, int handPos)
       return 0;
 }
 
+
+void assertTrue(int statement) {
+  if (statement) {
+    printf("TRUE\n");
+  } else {
+    printf("FALSE\n");
+  }
+}
+
+
 int initializeGame(int numPlayers, int kingdomCards[10], int randomSeed,
 		   struct gameState *state) {
 

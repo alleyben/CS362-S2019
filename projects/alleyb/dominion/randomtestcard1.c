@@ -27,29 +27,24 @@ int getTreasureCount(int thisPlayer, struct gameState* game) {
   return numTreasure;
 }
 
-int getNumPlayers() {
-  
-}
-
-int getThisPlayer() {
-  
-}
-
 int main() {
   
   srand(time(NULL));
-  int newCards = 0;
   int discarded = 1;
   int numTreasureOld = 0, numTreasureNew = 0, addTreasure = 0;
   int cardCountOld = 0, cardCountNew = 0;
-  int handpos = 0, choice1 = 0, choice2 = 0, choice3 = 0, bonus = 0;
-  struct gameState game, testGame;
+  int handpos = 0;
+  
   int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
   			sea_hag, tribute, smithy, council_room};
   			
+  for (int i = 0; i < 10; i++){
+    printf("%d\n",rand());
+  }
+  			
   
   for (int i = 0; i < 10; i++){
-    
+    struct gameState game, testGame;
     // randomize
     int seed = rand()%1000;
     int numPlayers = (rand()%10) - 2;
@@ -66,7 +61,7 @@ int main() {
   	// initialize a game state and player cards
   	initializeGame(numPlayers, k, seed, &game);
   
-  	printf("----------------- Test %d for Card %s ----------------\n", i, TESTCARD);
+  	printf("----------------- Test %d for Card %s ----------------\n", i+1, TESTCARD);
   
   // make sure there are two cards minus discard card in hand
   	// ----------- TEST 1  --------------
@@ -75,7 +70,6 @@ int main() {
     // make sure there are two extra treasure cards
   
     addTreasure = 2;
-    newCards = 2;
     // randomize
     game.hand[thisPlayer][0] = adventurer;
     game.hand[thisPlayer][1] = k[rand()%10];
