@@ -1,7 +1,7 @@
 /*
 Include the following lines in your makefile:
-cardtest1: cardtest1.c dominion.o rngs.o
-gcc -o cardtest1 -g  cardtest1.c dominion.o rngs.o $(CFLAGS)
+randomtestcard1: randomtestcard1.c dominion.o rngs.o
+gcc -o randomtestcard1 -g  randomtestcard1.c dominion.o rngs.o $(CFLAGS)
 */
 
 

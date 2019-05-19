@@ -1,3 +1,9 @@
+/*
+Include the following lines in your makefile:
+randomtestcard3: randomtestcard3.c dominion.o rngs.o
+gcc -o randomtestcard1 -g  randomtestcard3.c dominion.o rngs.o $(CFLAGS)
+*/
+
 #include "dominion.h"
 #include "dominion_helpers.h"
 #include <string.h>
