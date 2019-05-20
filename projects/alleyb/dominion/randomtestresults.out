@@ -1,0 +1,367 @@
+----------------- Test 1 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 2, expected = 5
+FALSE
+TEST 2: same number of total cards
+number of cards total (5); expected (4)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (3); expected (6)
+FALSE
+----------------- Test 2 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 1, expected = 3
+FALSE
+TEST 2: same number of total cards
+number of cards total (5); expected (4)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (3); expected (6)
+FALSE
+----------------- Test 3 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 4, expected = 4
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 4 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 6, expected = 6
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 5 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 5, expected = 5
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 6 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 5, expected = 5
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 7 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 2, expected = 4
+FALSE
+TEST 2: same number of total cards
+number of cards total (5); expected (4)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (2); expected (6)
+FALSE
+----------------- Test 8 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 4, expected = 4
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 9 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 4, expected = 4
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (9)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (6); expected (6)
+TRUE
+----------------- Test 10 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 2, expected = 5
+FALSE
+TEST 2: same number of total cards
+number of cards total (5); expected (4)
+FALSE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (3); expected (6)
+FALSE
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+----------------- Test 1 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 4, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (5); expected (4)
+FALSE
+----------------- Test 2 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 4, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (5); expected (4)
+FALSE
+----------------- Test 3 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 4 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 5 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 6 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 7 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 4, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (5); expected (4)
+FALSE
+----------------- Test 8 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 9 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 8, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 10 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 4, expected = 7
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (5); expected (4)
+FALSE
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+----------------- Test 1 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 4, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 0, expected = -1
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 2 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 3 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 4 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 5 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 4, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 0, expected = -1
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 6 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 7 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 8 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 9 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 10 for Card villageEffect ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+
+ >>>>> SUCCESS: Testing complete villageEffect <<<<<
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+
+Function 'gainCard'
+Lines executed:0.00% of 13
+
+Function 'discardCard'
+Lines executed:100.00% of 13
+
+Function 'cardEffect'
+Lines executed:0.00% of 219
+
+Function 'getCost'
+Lines executed:0.00% of 57
+
+Function 'drawCard'
+Lines executed:77.27% of 22
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+
+Function 'isGameOver'
+Lines executed:0.00% of 10
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+
+Function 'whoseTurn'
+Lines executed:0.00% of 2
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+
+Function 'supplyCount'
+Lines executed:0.00% of 2
+
+Function 'handCard'
+Lines executed:0.00% of 3
+
+Function 'numHandCards'
+Lines executed:0.00% of 2
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'shuffle'
+Lines executed:100.00% of 16
+
+Function 'initializeGame'
+Lines executed:90.63% of 64
+
+Function 'assertTrue'
+Lines executed:100.00% of 5
+
+Function 'villageEffect'
+Lines executed:100.00% of 5
+
+Function 'smithyEffect'
+Lines executed:100.00% of 5
+
+Function 'remodelEffect'
+Lines executed:0.00% of 11
+
+Function 'councilRoomEffect'
+Lines executed:0.00% of 9
+
+Function 'adventurerEffect'
+Lines executed:100.00% of 18
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+
+Function 'newGame'
+Lines executed:0.00% of 3
+
+Function 'compare'
+Lines executed:83.33% of 6
+
+File 'dominion.c'
+Lines executed:24.63% of 613
+Creating 'dominion.c.gcov'
+

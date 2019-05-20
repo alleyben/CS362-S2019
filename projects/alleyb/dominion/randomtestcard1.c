@@ -34,30 +34,23 @@ int main() {
   int numTreasureOld = 0, numTreasureNew = 0, addTreasure = 0;
   int cardCountOld = 0, cardCountNew = 0;
   int handpos = 0;
+  int seed = 0;
+  int numPlayers = 0;
+  int thisPlayer = 0;
   
   int k[10] = {adventurer, embargo, village, minion, mine, cutpurse,
   			sea_hag, tribute, smithy, council_room};
   			
-  for (int i = 0; i < 10; i++){
-    printf("%d\n",rand());
-  }
+  struct gameState game, testGame;
   			
   
   for (int i = 0; i < 10; i++){
-    struct gameState game, testGame;
-    // randomize
-    int seed = rand()%1000;
-    int numPlayers = (rand()%10) - 2;
-    int thisPlayer = rand()%numPlayers;
     
-    //numPlayers and thisPlayer
-    //num -> -2 to 7 -> rand %10 - 2
-    //num -> 2 to 4 -> rand %3 + 2
-    //thisPlayer = rand % numPlayers
-  
-  	
-  	
-  
+    // randomize
+    seed = rand()%1000;
+    numPlayers = (rand()%3) + 2;
+    thisPlayer = rand()%numPlayers;
+    
   	// initialize a game state and player cards
   	initializeGame(numPlayers, k, seed, &game);
   
@@ -71,22 +64,14 @@ int main() {
   
     addTreasure = 2;
     // randomize
-    game.hand[thisPlayer][0] = adventurer;
-    game.hand[thisPlayer][1] = k[rand()%10];
-    game.hand[thisPlayer][2] = k[rand()%10];
-    game.hand[thisPlayer][3] = k[rand()%10];
-    game.hand[thisPlayer][4] = k[rand()%10];
-    // game.hand[thisPlayer][1] = copper;
-    // game.hand[thisPlayer][2] = duchy;
-    // game.hand[thisPlayer][3] = estate;
-    // game.hand[thisPlayer][4] = feast;
+    handpos = rand()%5;
+    game.hand[thisPlayer][handpos] = adventurer;
   
   	// copy the game state to a test case
   	memcpy(&testGame, &game, sizeof(struct gameState));
   
   	adventurerEffect(thisPlayer, &testGame, handpos);
-  // 	cardEffect(adventurer, choice1, choice2, choice3, &testGame, handpos, &bonus);
-  
+
     // find number of treasure cards in hand
     numTreasureNew = getTreasureCount(thisPlayer, &testGame);
   
@@ -115,6 +100,8 @@ int main() {
     // make sure hand is +2 with number of treasure cards - discarded card
     printf("number of cards in hand (%d); expected (%d)\n", testGame.handCount[thisPlayer], game.handCount[thisPlayer] + addTreasure - discarded);
     assertTrue(testGame.handCount[thisPlayer] == game.handCount[thisPlayer] + addTreasure - discarded);
+    
+    
 
   }
 	printf("\n >>>>> SUCCESS: Testing complete %s <<<<<\n\n", TESTCARD);
