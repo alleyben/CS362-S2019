@@ -1,0 +1,797 @@
+----------------- Test 1 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+----------------- Test 2 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 5, expected = 5
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (7); expected (6)
+FALSE
+----------------- Test 3 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+----------------- Test 4 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+----------------- Test 5 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+----------------- Test 6 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 5, expected = 5
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (7); expected (6)
+FALSE
+----------------- Test 7 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+----------------- Test 8 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 6, expected = 6
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (7); expected (6)
+FALSE
+----------------- Test 9 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 5, expected = 5
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (7); expected (6)
+FALSE
+----------------- Test 10 for Card adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 0, expected = 2
+FALSE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (0); expected (1)
+FALSE
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+----------------- Test 1 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+----------------- Test 2 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 7, expected = 7
+TRUE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 3 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+----------------- Test 4 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+----------------- Test 5 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+----------------- Test 6 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 7, expected = 7
+TRUE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 7 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+----------------- Test 8 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 7, expected = 7
+TRUE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 9 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 7, expected = 7
+TRUE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (9)
+FALSE
+----------------- Test 10 for Card smithy ----------------
+TEST 1: have 3 extra cards in hand
+number of cards = 0, expected = 2
+FALSE
+TEST 2: same number of total cards in player deck
+number of cards total (10); expected (10)
+TRUE
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+----------------- Test 1 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 2 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 3 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 4 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 5 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 6 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 7 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 8 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 9 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 0, expected = 1
+FALSE
+TEST 2: deck count is the same
+deck count = 10, expected = 9
+FALSE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+----------------- Test 10 for Card village ----------------
+TEST 1: hand count is +1
+hand count = 5, expected = 6
+FALSE
+TEST 2: deck count is the same
+deck count = 4, expected = 4
+TRUE
+TEST 3: number of actions is +2
+number actions = 3, expected = 3
+TRUE
+
+ >>>>> SUCCESS: Testing complete village <<<<<
+
+----------------- Testing Function: councilRoomEffect ----------------
+TEST 1: this player effects
+hand count = 8, expected = 8
+TRUE
+deck count = 1, expected = 1
+TRUE
+number buys = 2, expected = 2
+TRUE
+TEST 2: other players' effect: draw one card
+hand count = 1, expected = 1
+TRUE
+deck count = 9, expected = 9
+TRUE
+
+ >>>>> SUCCESS: Testing complete councilRoomEffect <<<<<
+
+----------------- Testing Function: remodelEffect ----------------
+TEST 1: this player effects
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 6
+(18) + 2 <= (6)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 5
+(18) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 5
+(18) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 3
+(18) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 3
+(18) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 5
+(18) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 5
+(18) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 3
+(18) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 2
+(18) + 2 > (2)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 5
+(18) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 3 +2 <= 4
+(18) + 2 > (4)
+FALSE
+(18) is not (18)
+FALSE
+(4) is not (18)
+TRUE
+(2) is not (18)
+TRUE
+(1) is not (18)
+TRUE
+(9) is not (18)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 6
+(4) + 2 <= (6)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 5
+(4) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 5
+(4) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 3
+(4) + 2 <= (3)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 3
+(4) + 2 <= (3)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 5
+(4) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 3
+(4) + 2 <= (3)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 5
+(4) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 3
+(4) + 2 <= (3)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 2
+(4) + 2 <= (2)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 5
+(4) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 0 +2 <= 4
+(4) + 2 <= (4)
+TRUE
+(18) is not (4)
+TRUE
+(4) is not (4)
+FALSE
+(2) is not (4)
+TRUE
+(1) is not (4)
+TRUE
+(9) is not (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 6
+(2) + 2 > (6)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 5
+(2) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 5
+(2) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 3
+(2) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 3
+(2) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 5
+(2) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 3
+(2) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 5
+(2) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 3
+(2) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 2
+(2) + 2 > (2)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 5
+(2) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 5 +2 <= 4
+(2) + 2 > (4)
+FALSE
+(18) is not (2)
+TRUE
+(4) is not (2)
+TRUE
+(2) is not (2)
+FALSE
+(1) is not (2)
+TRUE
+(9) is not (2)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 6
+(1) + 2 <= (6)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 5
+(1) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 5
+(1) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 3
+(1) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 3
+(1) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 5
+(1) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 3
+(1) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 5
+(1) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 3
+(1) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 2
+(1) + 2 > (2)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 5
+(1) + 2 <= (5)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 2 +2 <= 4
+(1) + 2 <= (4)
+TRUE
+(18) is not (1)
+TRUE
+(4) is not (1)
+TRUE
+(2) is not (1)
+TRUE
+(1) is not (1)
+FALSE
+(9) is not (1)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 6
+(9) + 2 <= (6)
+TRUE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 5
+(9) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 5
+(9) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 3
+(9) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 3
+(9) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 5
+(9) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 3
+(9) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 5
+(9) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 3
+(9) + 2 > (3)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 2
+(9) + 2 > (2)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 5
+(9) + 2 > (5)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+expected choice1 cost +2 <= choice 2 cost: 4 +2 <= 4
+(9) + 2 > (4)
+FALSE
+(18) is not (9)
+TRUE
+(4) is not (9)
+TRUE
+(2) is not (9)
+TRUE
+(1) is not (9)
+TRUE
+(9) is not (9)
+FALSE
+hand count = 5, expected = 5
+TRUE
+deck count = 5, expected = 4
+FALSE
+
+ >>>>> SUCCESS: Testing complete remodelEffect <<<<<
+
+----------------- Testing Function: smithyEffect ----------------
+TEST 1: this player effects
+hand count = 7, expected = 7
+TRUE
+deck count = 2, expected = 2
+TRUE
+
+ >>>>> SUCCESS: Testing complete smithyEffect <<<<<
+
+----------------- Testing Function: villageEffect ----------------
+TEST 1
+hand count = 5, expected = 6
+FALSE
+deck count = 4, expected = 4
+TRUE
+number actions = 3, expected = 3
+TRUE
+
+ >>>>> SUCCESS: Testing complete villageEffect <<<<<
+
+----------------- Testing Card: salvager ----------------
+TEST 1: get an extra buy
+number buys = 2, expected = 2
+TRUE
+TEST 2: trash a card and get its cost in coins
+starting money: (4);starting cards: (24)(4)(2)(1)(9); removed card: (4); added coin: (0);ending cards: (1)TRUE
+(9)TRUE
+(2)TRUE
+, expected: (2)(1)(9)
+hand count = 3, expected = 3
+TRUE
+deck count = 5, expected = 5
+TRUE
+coins = 4, expected = 4
+TRUE
+starting money: (4);starting cards: (24)(4)(2)(1)(9); removed card: (2); added coin: (5);ending cards: (1)TRUE
+(4)TRUE
+(9)TRUE
+, expected: (4)(1)(9)
+coins = 9, expected = 9
+TRUE
+starting money: (4);starting cards: (24)(4)(2)(1)(9); removed card: (1); added coin: (2);ending cards: (9)TRUE
+(4)TRUE
+(2)TRUE
+, expected: (4)(2)(9)
+coins = 6, expected = 6
+TRUE
+starting money: (4);starting cards: (24)(4)(2)(1)(9); removed card: (9); added coin: (4);ending cards: (1)TRUE
+(4)TRUE
+(2)TRUE
+, expected: (4)(2)(1)
+coins = 8, expected = 8
+TRUE
+
+ >>>>> SUCCESS: Testing complete salvager <<<<<
+
+----------------- Testing Card: smithy ----------------
+TEST 1: get 3 extra cards
+number of cards = 2, expected = 8
+FALSE
+
+ >>>>> SUCCESS: Testing complete smithy <<<<<
+
+----------------- Testing Card: adventurer ----------------
+TEST 1: have two more treasure cards in your hand
+number treasure = 3, expected = 3
+TRUE
+TEST 2: same number of total cards
+number of cards total (10); expected (10)
+TRUE
+TEST 3: hand is +2 with number of treasure cards
+number of cards in hand (7); expected (6)
+FALSE
+
+ >>>>> SUCCESS: Testing complete adventurer <<<<<
+
+----------------- Testing Card: great_hall ----------------
+TEST 1: draw an extra card and get an extra action
+number of actions = 1, expected = 2
+TRUE
+hand count = 4, expected = 4
+TRUE
+deck count = 5, expected = 5
+TRUE
+
+ >>>>> SUCCESS: Testing complete great_hall <<<<<
+
+File 'dominion.c'
+Lines executed:32.14% of 644
+dominion.c:creating 'dominion.c.gcov'
+
+Function 'assertTrue'
+Lines executed:100.00% of 5
+
+Function 'compare'
+Lines executed:83.33% of 6
+
+Function 'newGame'
+Lines executed:0.00% of 2
+
+Function 'kingdomCards'
+Lines executed:0.00% of 12
+
+Function 'initializeGame'
+Lines executed:89.74% of 78
+
+Function 'shuffle'
+Lines executed:94.44% of 18
+
+Function 'playCard'
+Lines executed:0.00% of 14
+
+Function 'buyCard'
+Lines executed:0.00% of 13
+
+Function 'numHandCards'
+Lines executed:0.00% of 1
+
+Function 'handCard'
+Lines executed:100.00% of 2
+
+Function 'supplyCount'
+Lines executed:0.00% of 1
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 11
+
+Function 'whoseTurn'
+Lines executed:100.00% of 1
+
+Function 'endTurn'
+Lines executed:0.00% of 22
+
+Function 'isGameOver'
+Lines executed:0.00% of 12
+
+Function 'scoreFor'
+Lines executed:0.00% of 26
+
+Function 'getWinners'
+Lines executed:0.00% of 33
+
+Function 'drawCard'
+Lines executed:33.33% of 24
+
+Function 'getCost'
+Lines executed:83.33% of 30
+
+Function 'cardEffect'
+Lines executed:17.65% of 289
+
+Function 'discardCard'
+Lines executed:86.67% of 15
+
+Function 'gainCard'
+Lines executed:0.00% of 15
+
+Function 'updateCoins'
+Lines executed:71.43% of 14
+
+File 'dominion.c'
+Lines executed:32.14% of 644
+dominion.c:creating 'dominion.c.gcov'
+
